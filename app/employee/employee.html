@@ -1,0 +1,38 @@
+<a ng-hide="employee.modalShown" ng-click="employee.modalShown=true;">Show select Employee Modal</a>
+<modal show='employee.modalShown' width='550' hide-modal="employee.hideModal()">
+    <div class = "modal-header">
+        <div class="head">Select an Employee</div>
+    </div>
+    <div class="modal-body">
+        <div>
+            <input type="checkbox" name= "email" id="emailEmp" ng-checked = "true"
+                   ng-modal="employee.sendWelcomeMail">
+            <label>Send welcome email to employee</label>
+        </div>
+        <div class="team">
+            <div class="teamHead">Select a team in the organisation</div>
+            <typeahead search-data="employee.companyData" searchkey='employee.team'
+                       selected-search="employee.selectedTeam"
+                       on-select="employee.selectTeam(searches)"
+                       placeholder="employee.teamPlaceHolder"></typeahead>
+            <div class="redError" ng-if="employee.teamError">{{employee.teamError}}</div>
+        </div>
+        <div class="team">
+            <div class="teamHead">Select an Employee</div>
+            <typeahead search-data="employee.employeeList"
+                       selected-search="employee.selectedEmployee"
+                       on-select="employee.selectEmployee(searches)"
+                        placeholder="employee.employeePlaceHolder"></typeahead>
+            <div class="redError" ng-if="employee.employeeError">{{employee.employeeError}}</div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="buttons">
+            <button id="okButton" class="btn okButton" type="button" ng-click="employee.validateDialogBox('okButton')"
+                    >OK
+            </button>
+            <button id="cancelButton" class="btn cancelButton" type="button" ng-click="employee.hideModal()" >Cancel
+            </button>
+        </div>
+    </div>
+</modal>

@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Arial", sans-serif;
+}
+
+/*MODAL COMPONENET CSS START*/
+.ng-modal {
+  .ng-modal-overlay {
+    position:absolute;
+    z-index:9999;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:#000000;
+    opacity: 0.1;
+  }
+  .ng-modal-dialog {
+    z-index:10000;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 4px 4px 80px #000;
+    .ng-modal-close {
+      position: absolute;
+      top: 3px;
+      right: 5px;
+      padding: 5px;
+      cursor: pointer;
+      font-size: 120%;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .ng-modal-dialog-content {
+      padding:10px;
+      text-align: left;
+      overflow: hidden;
+    }
+  }
+}
+/*MODAL COMPONENT CSS END*/
+
+input[type="checkbox"]{
+  transform: scale(1.5);
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+input[type="text"]{
+  width: 100%;
+  padding: 7px 15px;
+  font-size: 14px;
+  background-color: #9e9e9e;
+}
+input[type=text]:focus {
+  background-color: white;
+  outline: none !important;
+  border:1px solid #00bef2;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: #000;
+}
+
+::-webkit-input-placeholder:focus { /* WebKit, Blink, Edge */
+  color: red;
+}
+.team{
+  margin-top: 15px;
+}
+
+.teamHead{
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 0 10px 0;
+}
+
+label{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.85;
+  color: #222;
+  margin: 0 0 0 5px;
+}
+
+.dropDownArrow{
+  float: right;
+  margin-top: -26px;
+  margin-right: 17px;
+}
+
+.listDropdown {
+  border: 1px #dadada solid;
+  position: absolute;
+  width: 96%;
+  z-index: 8;
+  border: 1px #dadada solid;
+  background: white;
+}
+
+ul{
+  list-style: none;
+}
+ul li{
+  overflow: hidden;
+  margin-left: -20px;
+}
+
+ul li:hover{
+  background-color: #9e9e9e;
+}
+
+.items{
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+  float: left;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.redError{
+  color: red;
+}
+.btn {
+  width: 80px;
+  margin: 10px 15px 0 0;
+  height: 35px;
+  cursor: pointer;
+  float: right;
+}
+.cancelButton{
+  background: #9e9e9e;
+}
+
+.okButton{
+  background-color: #00b9f5;
+  border: #00b9f5;
+  color: #fff;
+  font-size:14px;
+}
+
+a{
+  color: #03a9f4;
+  cursor: pointer;
+}
+
+.modal-head .head{
+  margin: 10px 0 10px 0;
+  font-size: 24px;
+  color: #00bef2;
+}

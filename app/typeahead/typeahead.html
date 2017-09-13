@@ -1,0 +1,14 @@
+<input  class="input" type='text' placeholder="{{::typeahead.placeholder}}"  ng-model = "typeahead.selectedSearch"
+        ng-mousedown='typeahead.showItemList()' ng-blur="typeahead.hideItemList()"/>
+<div class="dropDownArrow"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+<div class="listDropdown" id="teamList" ng-show="typeahead.showSearchDropDown">
+    <ul>
+        <li ng-repeat = "searches in typeahead.searchFilteredData  track by $index">
+            <div class="items" ng-mousedown =
+                    "typeahead.selectSearch(searches)">
+                {{typeahead.searchkey ? searches[typeahead.searchkey] : searches}}
+            </div>
+
+        </li>
+    </ul>
+</div>
